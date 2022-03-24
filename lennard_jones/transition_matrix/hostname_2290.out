@@ -1,0 +1,40 @@
+Running on host compute-65
+Time is Wed Mar 23 22:02:37 EDT 2022
+Directory is /home/hwh/dorms/lennard_jones/transition_matrix
+ID is 2290
+CPU is  Intel(R) Xeon(R) Silver 4208 CPU @ 2.10GHz
+v0.19.0-HEAD
+--num_procs,32,--num_hours,120,--max_particles,370,--temperature,1.5,--mu,-2.352321,--equil_sweeps,1,--prod_sweeps,10,
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Initializing random number generator for reproduction with seed(71234567)
+Time is Wed Mar 23 22:10:14 EDT 2022

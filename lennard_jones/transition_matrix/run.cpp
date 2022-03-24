@@ -12,7 +12,8 @@ static feasst::ArgumentParse args("A grand canonical ensemble transition-matrix 
   {"--max_particles", "maximum number of particles", "370"},
   {"--temperature", "temperature", "1.5"},
   {"--mu", "chemical potential", "-2.352321"},
-  {"--min_sweeps", "minimum number of TM sweeps before termination", "10"}});
+  {"--equil_sweeps", "number of TM sweeps before production", "1"},
+  {"--prod_sweeps", "minimum number of TM sweeps to complete simulation", "10"}});
 
 std::shared_ptr<MonteCarlo> mc(int thread, int mn, int mx) {
   const std::string steps_per = str(1e6);
@@ -27,7 +28,8 @@ std::shared_ptr<MonteCarlo> mc(int thread, int mn, int mx) {
   mc->set(MakeFlatHistogram(
         MakeMacrostateNumParticles(
             Histogram({{"width", "1"}, {"max", str(mx)}, {"min", str(mn)}})),
-        MakeTransitionMatrix({{"min_sweeps", args.get("--min_sweeps")}})));
+        MakeTransitionMatrix({{"min_sweeps", args.get("--prod_sweeps")},
+                              {"reset_sweeps", args.get("--equil_sweeps")}})));
   mc->add(MakeTrialTranslate({{"weight", "1."}, {"tunable_param", "1."}}));
   mc->add(MakeTrialTransfer({{"weight", "4"}, {"particle_type", "0"}}));
   mc->add(MakeCheckEnergy({{"steps_per", steps_per}, {"tolerance", "0.0001"}}));
@@ -65,6 +67,7 @@ int main(int argc, char ** argv) {
   clones.set(MakeCheckpoint({{"file_name", "checkpoint.fst"}}));
   clones.initialize_and_run_until_complete({{"ln_prob_file", "ln_prob.txt"},
                                             {"omp_batch", "1e6"}});
+  MakeCheckpoint({{"file_name", "checkpoint.fst"}})->write(clones);
 
   // output the macrostate distribution and macrostate energies
   LnProbability ln_prob;

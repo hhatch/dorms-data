@@ -1,0 +1,8 @@
+#use glob syntax
+syntax: glob
+
+en*
+clones*
+checkpoint*
+ln_prob.txt
+

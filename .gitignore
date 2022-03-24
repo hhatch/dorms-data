@@ -4,3 +4,5 @@ syntax: glob
 feasst
 build
 *.xyz
+launch.cmd
+
