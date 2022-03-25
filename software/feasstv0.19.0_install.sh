@@ -9,7 +9,7 @@ for version in v0.19.0; do
     mkdir build
     pushd build
       cmake ..
-      make -j12 install
+      make -j4 install
     popd
   popd
 done
