@@ -1,8 +1,8 @@
 #use glob syntax
 syntax: glob
 
-feasst
 build
 *.xyz
 launch.cmd
 
+software/feasstv0.19.0
